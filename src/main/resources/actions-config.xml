@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
-        <name>run</name>
+        <name>runAction</name>
+        <command>run</command>
         <flags>
             <flag>-d</flag>
             <flag>-c</flag>
@@ -9,7 +10,8 @@
         </flags>
     </action>
     <action>
-        <name>compile</name>
+        <name>compileAction</name>
+        <command>compile</command>
         <flags>
             <flag>-d</flag>
             <flag>-c</flag>
@@ -17,7 +19,8 @@
         </flags>
     </action>
     <action>
-        <name>package</name>
+        <name>packageAction</name>
+        <command>package</command>
         <flags>
             <flag>-d</flag>
             <flag>-c</flag>
@@ -25,7 +28,8 @@
         </flags>
     </action>
     <action>
-        <name>help</name>
+        <name>helpAction</name>
+        <command>help</command>
         <flags>
             <flag>-d</flag>
             <flag>-c</flag>

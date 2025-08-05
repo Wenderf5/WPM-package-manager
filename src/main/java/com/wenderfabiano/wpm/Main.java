@@ -4,6 +4,7 @@ import com.wenderfabiano.wpm.validator.Validator;
 
 public class Main {
     public static void main(String[] args) {
-        new Validator().validate(args);
+        Validator validator = new Validator();
+        validator.validate(args);
     }
 }

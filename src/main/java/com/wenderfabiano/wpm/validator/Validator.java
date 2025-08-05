@@ -1,6 +1,5 @@
 package com.wenderfabiano.wpm.validator;
 
-import com.wenderfabiano.wpm.actions.DefaultAction;
 import com.wenderfabiano.wpm.exceptions.MultipleActionsException;
 import com.wenderfabiano.wpm.exceptions.UnrecognizedActionException;
 
@@ -12,11 +11,6 @@ public class Validator {
     private final List<String> actions = new ArrayList<>(Arrays.asList("run", "compile", "package"));
 
     public void validate(String... actions) {
-        if (actions.length < 1) {
-            DefaultAction.execute();
-            return;
-        }
-
         try {
             actionValidator(actions);
             multipleActionsValidator(actions);
