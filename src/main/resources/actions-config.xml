@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <name>run</name>
+        <flags>
+            <flag>-d</flag>
+            <flag>-c</flag>
+            <flag>-f</flag>
+        </flags>
+    </action>
+    <action>
+        <name>compile</name>
+        <flags>
+            <flag>-d</flag>
+            <flag>-c</flag>
+            <flag>-f</flag>
+        </flags>
+    </action>
+    <action>
+        <name>package</name>
+        <flags>
+            <flag>-d</flag>
+            <flag>-c</flag>
+            <flag>-f</flag>
+        </flags>
+    </action>
+    <action>
+        <name>help</name>
+        <flags>
+            <flag>-d</flag>
+            <flag>-c</flag>
+            <flag>-f</flag>
+        </flags>
+    </action>
+</actions>
