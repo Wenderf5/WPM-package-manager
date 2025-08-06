@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
-        <name>run</name>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
+        <name>runAction</name>
+        <command>run</command>
     </action>
     <action>
-        <name>compile</name>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
+        <name>compileAction</name>
+        <command>compile</command>
     </action>
     <action>
-        <name>package</name>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
+        <name>packageAction</name>
+        <command>package</command>
     </action>
     <action>
-        <name>help</name>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
+        <name>helpAction</name>
+        <command>help</command>
     </action>
 </actions>
