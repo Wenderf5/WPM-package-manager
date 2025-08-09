@@ -3,37 +3,17 @@
     <action>
         <name>runAction</name>
         <command>run</command>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
     </action>
     <action>
         <name>compileAction</name>
         <command>compile</command>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
     </action>
     <action>
         <name>packageAction</name>
         <command>package</command>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
     </action>
     <action>
         <name>helpAction</name>
         <command>help</command>
-        <flags>
-            <flag>-d</flag>
-            <flag>-c</flag>
-            <flag>-f</flag>
-        </flags>
     </action>
 </actions>
