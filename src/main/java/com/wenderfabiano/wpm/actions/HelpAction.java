@@ -1,6 +1,6 @@
 package com.wenderfabiano.wpm.actions;
 
-public class DefaultAction {
+public class HelpAction {
     public static void execute(){
         System.out.println("");
         System.out.println("------------Hello, welcome to wpm!------------");
