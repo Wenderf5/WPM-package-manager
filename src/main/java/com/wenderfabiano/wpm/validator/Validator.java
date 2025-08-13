@@ -1,5 +1,6 @@
 package com.wenderfabiano.wpm.validator;
 
+import com.wenderfabiano.wpm.controller.Controller;
 import com.wenderfabiano.wpm.exceptions.MultipleActionsException;
 import com.wenderfabiano.wpm.exceptions.MultipleSameActionsException;
 import com.wenderfabiano.wpm.exceptions.UnrecognizedActionException;
@@ -14,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Validator {
-    private List<String> validActions = new ArrayList<>();
+    private List<Action> validActions = new ArrayList<>();
+    private List<String> validComands = new ArrayList<>();
 
     public void validate(String... actions) {
         try {
@@ -30,13 +32,18 @@ public class Validator {
             return;
         }
 
-        System.out.println("Ok");
         //Chama o controller
+        for (Action action : validActions){
+            if (action.getCommand().equals(actions[0])){
+                Controller controller = new Controller();
+                controller.callAction(action.getFullClassName());
+            }
+        }
     }
 
     private void actionValidator(String... actions) {
         for (String action : actions) {
-            if (!this.validActions.contains(action)) {
+            if (!this.validComands.contains(action)) {
                 throw new UnrecognizedActionException("The argument '" + action + "' is not recognized by wpm!");
             }
         }
@@ -67,7 +74,7 @@ public class Validator {
 
         int detectedActions = 0;
         for (String action : actions) {
-            if (this.validActions.contains(action)) {
+            if (this.validComands.contains(action)) {
                 detectedActions++;
             }
             if (detectedActions > 1) {
@@ -86,8 +93,12 @@ public class Validator {
             NodeList actionsList = doc.getElementsByTagName("action");
             for (int i = 0; i < actionsList.getLength(); i++) {
                 Element element = (Element) actionsList.item(i);
+                String name = element.getElementsByTagName("name").item(0).getTextContent();
                 String command = element.getElementsByTagName("command").item(0).getTextContent();
-                validActions.add(command);
+                String fullClassName = element.getElementsByTagName("fullClassName").item(0).getTextContent();
+
+                validActions.add(new Action(name, command, fullClassName));
+                validComands.add(command);
             }
         } catch (Exception e) {
             throw new RuntimeException("Failed to load valid actions.");
