@@ -18,6 +18,6 @@
     <action>
         <name>helpAction</name>
         <command>help</command>
-        <fullClassName>com.wenderfabiano.wpm.help</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.HelpAction</fullClassName>
     </action>
 </actions>

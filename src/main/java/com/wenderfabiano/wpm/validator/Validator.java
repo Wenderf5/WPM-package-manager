@@ -3,6 +3,7 @@ package com.wenderfabiano.wpm.validator;
 import com.wenderfabiano.wpm.controller.Controller;
 import com.wenderfabiano.wpm.exceptions.MultipleActionsException;
 import com.wenderfabiano.wpm.exceptions.MultipleSameActionsException;
+import com.wenderfabiano.wpm.exceptions.NoActionsFound;
 import com.wenderfabiano.wpm.exceptions.UnrecognizedActionException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -33,8 +34,8 @@ public class Validator {
         }
 
         //Chama o controller
-        for (Action action : validActions){
-            if (action.getCommand().equals(actions[0])){
+        for (Action action : validActions) {
+            if (action.getCommand().equals(actions[0])) {
                 Controller controller = new Controller();
                 controller.callAction(action.getFullClassName());
             }
@@ -42,6 +43,10 @@ public class Validator {
     }
 
     private void actionValidator(String... actions) {
+        if (actions.length < 1) {
+            throw new NoActionsFound("No action passed. To see what actions can be performed, use the 'help' action.");
+        }
+
         for (String action : actions) {
             if (!this.validComands.contains(action)) {
                 throw new UnrecognizedActionException("The argument '" + action + "' is not recognized by wpm!");
