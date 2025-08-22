@@ -8,7 +8,7 @@
     <action>
         <name>compileAction</name>
         <command>compile</command>
-        <fullClassName>com.wenderfabiano.wpm.compile</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.compileAction.CompileAction</fullClassName>
     </action>
     <action>
         <name>packageAction</name>
@@ -18,6 +18,6 @@
     <action>
         <name>helpAction</name>
         <command>help</command>
-        <fullClassName>com.wenderfabiano.wpm.actions.HelpAction</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.helpAction.HelpAction</fullClassName>
     </action>
 </actions>
