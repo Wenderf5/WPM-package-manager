@@ -1,6 +1,4 @@
-package com.wenderfabiano.wpm.actions.helpAction;
-
-import com.wenderfabiano.wpm.actions.Action;
+package com.wenderfabiano.wpm.actions;
 
 public class HelpAction implements Action {
     public void execute(){

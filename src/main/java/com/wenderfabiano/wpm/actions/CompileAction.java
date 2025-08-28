@@ -1,6 +1,4 @@
-package com.wenderfabiano.wpm.actions.compileAction;
-
-import com.wenderfabiano.wpm.actions.Action;
+package com.wenderfabiano.wpm.actions;
 
 import java.io.File;
 
