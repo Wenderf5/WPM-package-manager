@@ -28,7 +28,7 @@ public class RunAction implements Action {
             }
             String mainClass = nodes.item(0).getTextContent();
 
-            String command = "java -cp '.;../resources;' " + mainClass;
+            String command = "java -cp '.;../resources;../../../libs/*' " + mainClass;
             ProcessBuilder processBuilder = new CreateProcess().create(
                     "./dist/classes/java",
                     "powershell.exe",
