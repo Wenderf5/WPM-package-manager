@@ -3,16 +3,16 @@
     <action>
         <name>runAction</name>
         <command>run</command>
-        <fullClassName>com.wenderfabiano.wpm.actions.RunAction</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.runAction.RunAction</fullClassName>
     </action>
     <action>
         <name>compileAction</name>
         <command>compile</command>
-        <fullClassName>com.wenderfabiano.wpm.actions.CompileAction</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.compileAction.CompileAction</fullClassName>
     </action>
     <action>
         <name>helpAction</name>
         <command>help</command>
-        <fullClassName>com.wenderfabiano.wpm.actions.HelpAction</fullClassName>
+        <fullClassName>com.wenderfabiano.wpm.actions.helpAction.HelpAction</fullClassName>
     </action>
 </actions>
